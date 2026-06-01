@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+.title{
+    text-align: center;
+    font-family: "Instrument Serif", sans-serif;
+    height: 200px;
+    padding-top: 35px;
+    color: white;
+}
+
+body{
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(images/landscape.jpg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-attachment: fixed;
+    background-size:cover;
+}
+
+.search-bar{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    max-width: 600px;
+    margin: 150px auto 0;
+}
+
+.search-bar input{
+    width: 100%;
+    padding: 14px 18px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+}
+
+.search-bar button{
+    padding: 14px 22px;
+    font-size: 18px;
+    border: none;
+    background-color: #1f4d3a;
+    color: white;
+    cursor: pointer;
+}
