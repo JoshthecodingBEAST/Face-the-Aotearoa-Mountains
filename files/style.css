@@ -9,18 +9,19 @@
 .title{
     text-align: center;
     font-family: "Instrument Serif", sans-serif;
+    font-size: xx-large;
     height: 200px;
-    padding-top: 35px;
+    padding-top: 45px;
     color: white;
 }
 
 body{
     min-height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(images/landscape.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(images/title_bg.jpg);
     background-repeat: no-repeat;
-    background-position: center bottom;
+    background-position: bottom;
     background-attachment: fixed;
-    background-size:cover;
+    background-size: cover;
 }
 
 .search-bar{
@@ -46,4 +47,68 @@ body{
     background-color: #1f4d3a;
     color: white;
     cursor: pointer;
+}
+
+.search-error{
+    min-height: 24px;
+    margin-top: 16px;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.locations-page{
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 0;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.back-link{
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.locations-heading{
+    margin-top: 80px;
+    text-align: center;
+}
+
+.locations-heading h1{
+    font-family: "Instrument Serif", sans-serif;
+    font-size: 56px;
+    font-weight: 400;
+}
+
+.locations-heading p{
+    margin-top: 12px;
+    font-size: 20px;
+}
+
+.locations-scaffold{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 50px;
+}
+
+.location-placeholder{
+    min-height: 220px;
+    border: 2px dashed rgba(255, 255, 255, 0.75);
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 700px){
+    .locations-heading h1{
+        font-size: 42px;
+    }
+
+    .locations-scaffold{
+        grid-template-columns: 1fr;
+    }
 }

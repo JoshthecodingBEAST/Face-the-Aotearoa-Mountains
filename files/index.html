@@ -12,9 +12,63 @@
         <h3>And other tourist spots around New Zealand</h3>
     </div>
 
-    <form class="search-bar">
-        <input type="text" placeholder="Enter City">
+    <form class="search-bar" id="city-search" action="locations.html" method="get">
+        <input type="text" id="city-input" name="city" placeholder="Enter City" required>
         <button type="submit">Search</button>
     </form>
+    <p class="search-error" id="search-error" aria-live="polite"></p>
+
+    <script>
+        // Cities accepted by the search form. Add more cities here when needed.
+        const cities = [
+            "Auckland",
+            "Wellington",
+            "Christchurch",
+            "Hamilton",
+            "Tauranga",
+            "Dunedin",
+            "Palmerston North",
+            "Napier",
+            "Rotorua",
+            "Whangarei",
+            "New Plymouth",
+            "Invercargill",
+            "Whanganui",
+            "Gisborne",
+            "Nelson",
+            "Queenstown",
+            "Taupo",
+            "Blenheim",
+            "Timaru",
+            "Hastings"
+        ];
+
+        // Gets the form, input box, and error message so JavaScript can use them.
+        const form = document.getElementById("city-search");
+        const cityInput = document.getElementById("city-input");
+        const searchError = document.getElementById("search-error");
+
+        // Checks the typed city before allowing the form to open the locations page.
+        form.addEventListener("submit", function(event) {
+            const city = cityInput.value.trim();
+
+            // Matches city names without worrying about capital letters.
+            const matchedCity = cities.find(function(validCity) {
+                return validCity.toLowerCase() === city.toLowerCase();
+            });
+
+            // Stops the form and asks the user to try again if the city is not valid.
+            if (!matchedCity) {
+                event.preventDefault();
+                searchError.textContent = "Please enter a valid city in Aotearoa.";
+                cityInput.value = "";
+                cityInput.focus();
+                return;
+            }
+
+            // Changes city into proper format (capitalised!).
+            cityInput.value = matchedCity;
+        });
+    </script>
 </body>
 </html>

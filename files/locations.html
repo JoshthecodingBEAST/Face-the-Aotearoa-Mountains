@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locations | FTAM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="locations-page">
+        <a class="back-link" href="index.html">Back to search</a>
+
+        <section class="locations-heading">
+            <h1>Locations near <span id="city-name">your city</span></h1>
+            <p>This page is ready for nearby mountain and tourist spot results.</p>
+        </section>
+
+        <section class="locations-scaffold" aria-label="Nearby locations">
+            <div class="location-placeholder"></div>
+            <div class="location-placeholder"></div>
+            <div class="location-placeholder"></div>
+        </section>
+    </main>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const city = params.get("city");
+        const cityName = document.getElementById("city-name");
+
+        if (city && city.trim()) {
+            cityName.textContent = city.trim();
+        }
+    </script>
+</body>
+</html>
