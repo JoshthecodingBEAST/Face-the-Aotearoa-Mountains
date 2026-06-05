@@ -55,7 +55,7 @@ body{
     cursor: pointer;
 }
 
-/* Validation message shown after an invalid search. */
+/* Message shown when a city does not have results yet. */
 .search-error{
     min-height: 24px;
     margin-top: 16px;
@@ -109,9 +109,21 @@ body{
 }
 
 .location-placeholder{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     min-height: 220px;
+    padding: 18px;
     border: 2px dashed rgba(255, 255, 255, 0.75);
     background-color: rgba(0, 0, 0, 0.25);
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.locations-scaffold .search-error{
+    grid-column: 1 / -1;
 }
 
 /* Stacks the locations page layout on smaller screens. */

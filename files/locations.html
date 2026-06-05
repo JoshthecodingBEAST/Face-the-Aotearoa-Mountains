@@ -7,28 +7,104 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Main content for the locations results page. -->
     <main class="locations-page">
         <a class="back-link" href="index.html">Back to search</a>
 
+        <!-- Shows the city the user searched for. -->
         <section class="locations-heading">
             <h1>Locations near <span id="city-name">your city</span></h1>
-            <p>This page is ready for nearby mountain and tourist spot results.</p>
+            <p>Here are the top three locations!</p>
         </section>
 
-        <section class="locations-scaffold" aria-label="Nearby locations">
-            <div class="location-placeholder"></div>
-            <div class="location-placeholder"></div>
-            <div class="location-placeholder"></div>
-        </section>
+        <!-- Results are added here by JavaScript. -->
+        <section class="locations-scaffold" id="locations-results" aria-label="Nearby locations"></section>
     </main>
 
     <script>
-        const params = new URLSearchParams(window.location.search);
-        const city = params.get("city");
-        const cityName = document.getElementById("city-name");
+        // JavaScript city dictionary.
+        const cityVacationSpots = {
+            auckland: [
+                { name: "Auckland Placeholder Spot 1", link: "" },
+                { name: "Auckland Placeholder Spot 2", link: "" },
+                { name: "Auckland Placeholder Spot 3", link: "" }
+            ],
+            wellington: [
+                { name: "Wellington Placeholder Spot 1", link: "" },
+                { name: "Wellington Placeholder Spot 2", link: "" },
+                { name: "Wellington Placeholder Spot 3", link: "" }
+            ],
+            christchurch: [
+                { name: "Christchurch Placeholder Spot 1", link: "" },
+                { name: "Christchurch Placeholder Spot 2", link: "" },
+                { name: "Christchurch Placeholder Spot 3", link: "" }
+            ],
+            rotorua: [
+                { name: "Rotorua Placeholder Spot 1", link: "" },
+                { name: "Rotorua Placeholder Spot 2", link: "" },
+                { name: "Rotorua Placeholder Spot 3", link: "" }
+            ],
+            hamilton: [
+                { name: "Hamilton Placeholder Spot 1", link: "" },
+                { name: "Hamilton Placeholder Spot 2", link: "" },
+                { name: "Hamilton Placeholder Spot 3", link: "" }
+            ],
+            tauranga: [
+                { name: "Tauranga Placeholder Spot 1", link: "" },
+                { name: "Tauranga Placeholder Spot 2", link: "" },
+                { name: "Tauranga Placeholder Spot 3", link: "" }
+            ],
+            dunedin: [
+                { name: "Dunedin Placeholder Spot 1", link: "" },
+                { name: "Dunedin Placeholder Spot 2", link: "" },
+                { name: "Dunedin Placeholder Spot 3", link: "" }
+            ],
+            queenstown: [
+                { name: "Queenstown Placeholder Spot 1", link: "" },
+                { name: "Queenstown Placeholder Spot 2", link: "" },
+                { name: "Queenstown Placeholder Spot 3", link: "" }
+            ]
+        };
 
-        if (city && city.trim()) {
-            cityName.textContent = city.trim();
+        // Reads the city name from the URL.
+        const params = new URLSearchParams(window.location.search);
+        const city = params.get("city") || "";
+        const cityKey = city.trim().toLowerCase();
+        const cityName = document.getElementById("city-name");
+        const locationsResults = document.getElementById("locations-results");
+
+        // Search function.
+        if (cityKey && cityVacationSpots[cityKey]) {
+            cityName.textContent = formatCityName(cityKey);
+            displayResults(cityVacationSpots[cityKey]);
+        } else {
+            showUnknownCityMessage();
+        }
+
+        // Formats the city name for the heading.
+        function formatCityName(city) {
+            return city.charAt(0).toUpperCase() + city.slice(1);
+        }
+
+        // Result display function.
+        function displayResults(vacationSpots) {
+            locationsResults.innerHTML = vacationSpots.map(function(spot) {
+                return `
+                    <a class="location-placeholder" href="${spot.link}">
+                        ${spot.name}
+                    </a>
+                `;
+            }).join("");
+        }
+
+        // Error handling for unknown cities.
+        function showUnknownCityMessage() {
+            cityName.textContent = "your city";
+            locationsResults.innerHTML = `
+                <p class="search-error">
+                    No vacation recommendations available for this city.
+                </p>
+            `;
         }
     </script>
 </body>
