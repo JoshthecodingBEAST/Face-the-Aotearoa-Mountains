@@ -22,47 +22,49 @@
     </main>
 
     <script>
+        const placeholderImage = "../images/logo.jpg";
+
         // JavaScript city dictionary.
         const cityVacationSpots = {
             auckland: [
-                { name: "Auckland Placeholder Spot 1", link: "" },
-                { name: "Auckland Placeholder Spot 2", link: "" },
-                { name: "Auckland Placeholder Spot 3", link: "" }
+                { name: "Auckland Placeholder Spot 1", link: "", image: "../images/logo.jpg" },
+                { name: "Auckland Placeholder Spot 2", link: "", image: "../images/logo.jpg" },
+                { name: "Auckland Placeholder Spot 3", link: "", image: "../images/logo.jpg" }
             ],
             wellington: [
-                { name: "Wellington Placeholder Spot 1", link: "" },
-                { name: "Wellington Placeholder Spot 2", link: "" },
-                { name: "Wellington Placeholder Spot 3", link: "" }
+                { name: "Wellington Placeholder Spot 1", link: "", image: "../images/logo.jpg" },
+                { name: "Wellington Placeholder Spot 2", link: "", image: "../images/logo.jpg" },
+                { name: "Wellington Placeholder Spot 3", link: "", image: "../images/logo.jpg" }
             ],
             christchurch: [
-                { name: "Christchurch Placeholder Spot 1", link: "" },
-                { name: "Christchurch Placeholder Spot 2", link: "" },
-                { name: "Christchurch Placeholder Spot 3", link: "" }
+                { name: "Christchurch Placeholder Spot 1", link: "", image: "../images/logo.jpg" },
+                { name: "Christchurch Placeholder Spot 2", link: "", image: "../images/logo.jpg" },
+                { name: "Christchurch Placeholder Spot 3", link: "", image: "../images/logo.jpg" }
             ],
             rotorua: [
-                { name: "Rotorua Placeholder Spot 1", link: "" },
-                { name: "Rotorua Placeholder Spot 2", link: "" },
-                { name: "Rotorua Placeholder Spot 3", link: "" }
+                { name: "Rotorua Placeholder Spot 1", link: "locations/rotorua_tongariro.html", image: "../images/logo.jpg" },
+                { name: "Rotorua Placeholder Spot 2", link: "", image: "../images/logo.jpg" },
+                { name: "Rotorua Placeholder Spot 3", link: "", image: "../images/logo.jpg" }
             ],
             hamilton: [
-                { name: "Hamilton Placeholder Spot 1", link: "" },
-                { name: "Hamilton Placeholder Spot 2", link: "" },
-                { name: "Hamilton Placeholder Spot 3", link: "" }
+                { name: "Hamilton Placeholder Spot 1", link: "", image: "../images/logo.jpg" },
+                { name: "Hamilton Placeholder Spot 2", link: "", image: "../images/logo.jpg" },
+                { name: "Hamilton Placeholder Spot 3", link: "", image: "../images/logo.jpg" }
             ],
             tauranga: [
-                { name: "Tauranga Placeholder Spot 1", link: "" },
-                { name: "Tauranga Placeholder Spot 2", link: "" },
-                { name: "Tauranga Placeholder Spot 3", link: "" }
+                { name: "Tauranga Placeholder Spot 1", link: "", image: "../images/logo.jpg" },
+                { name: "Tauranga Placeholder Spot 2", link: "", image: "../images/logo.jpg" },
+                { name: "Tauranga Placeholder Spot 3", link: "", image: "../images/logo.jpg" }
             ],
             dunedin: [
-                { name: "Dunedin Placeholder Spot 1", link: "" },
-                { name: "Dunedin Placeholder Spot 2", link: "" },
-                { name: "Dunedin Placeholder Spot 3", link: "" }
+                { name: "Dunedin Placeholder Spot 1", link: "", image: "../images/logo.jpg" },
+                { name: "Dunedin Placeholder Spot 2", link: "", image: "../images/logo.jpg" },
+                { name: "Dunedin Placeholder Spot 3", link: "", image: "../images/logo.jpg" }
             ],
             queenstown: [
-                { name: "Queenstown Placeholder Spot 1", link: "" },
-                { name: "Queenstown Placeholder Spot 2", link: "" },
-                { name: "Queenstown Placeholder Spot 3", link: "" }
+                { name: "Queenstown Placeholder Spot 1", link: "", image: "../images/logo.jpg" },
+                { name: "Queenstown Placeholder Spot 2", link: "", image: "../images/logo.jpg" },
+                { name: "Queenstown Placeholder Spot 3", link: "", image: "../images/logo.jpg" }
             ]
         };
 
@@ -89,9 +91,11 @@
         // Result display function.
         function displayResults(vacationSpots) {
             locationsResults.innerHTML = vacationSpots.map(function(spot) {
+                const image = spot.image || placeholderImage;
                 return `
                     <a class="location-placeholder" href="${spot.link}">
-                        ${spot.name}
+                        <img src="${image}" alt="${spot.name}" class="location-placeholder-image" onerror="this.src='${placeholderImage}'">
+                        <span>${spot.name}</span>
                     </a>
                 `;
             }).join("");
