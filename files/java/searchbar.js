@@ -3,7 +3,7 @@ const placeholderImage = "../images/logo.jpg";
         // JavaScript city dictionary.
         const cityVacationSpots = {
             auckland: [
-                { name: "Auckland Placeholder Spot 1", link: "locations/auckland_skytower.html", image: "../images/logo.jpg" },
+                { name: "Auckland Placeholder Spot 1", link: "locations/auckland_sky_tower.html", image: "../images/auckland_sky_tower.jpg" },
                 { name: "Auckland Placeholder Spot 2", link: "", image: "../images/logo.jpg" },
                 { name: "Auckland Placeholder Spot 3", link: "", image: "../images/logo.jpg" }
             ],

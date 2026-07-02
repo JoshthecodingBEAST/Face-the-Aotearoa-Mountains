@@ -17,6 +17,14 @@
     color: white;
 }
 
+.instructions{
+    text-align: center;
+    font-family: "Instrument Serif", sans-serif;
+    font-size: xx-large;
+    padding-top: 45px;
+    color: white;
+}
+
 /* Full-page background image and overlay. */
 body{
     min-height: 100vh;
