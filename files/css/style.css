@@ -85,12 +85,27 @@ body{
 }
 
 /* Links back to the search page. */
-.back-link{
-    color: white;
-    font-size: 18px;
+a.back-link{
+    display: inline-block;
+    position:fixed;
+    margin: 1%;
+    padding: 1%;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
     text-decoration: none;
+    color: white;
+    background-color: rgb(129, 235, 134);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgb(82, 82, 82);
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
-
+a.back-link:hover{
+    transform:scale(1.05);
+}
+a.back-link:active{
+    transform: scale(0.95);
+}
 /* This is the Heading area for the selected city. */
 .locations-heading{
     margin-top: 80px;

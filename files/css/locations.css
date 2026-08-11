@@ -1,13 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: poppins, sans-serif;
+    font-family: 'poppins', sans-serif;
 }
 .container{
     min-height: 100%;
     background: rgb(43, 43, 43);
-    border: 20px solid rgb(129, 235, 134);
+    border: 40px solid #94c239;
     border-style:ridge;
     color: rgb(255, 249, 165);
 }
@@ -15,6 +17,8 @@
     max-width: 65%;
     margin:0px auto;
 }
+
+
 a.button{
     display: inline-block;
     position:fixed;
@@ -28,7 +32,6 @@ a.button{
     background-color: rgb(129, 235, 134);
     border-radius: 8px;
     box-shadow: 0 4px 6px rgb(82, 82, 82);
-    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 a.button:hover{
     transform:scale(1.05);
@@ -37,13 +40,14 @@ a.button:active{
     transform: scale(0.95);
 }
 .results-btn{
-    top:20px;
-    left:20px;
+    top:25px;
+    left:25px;
 }
 .search-btn{
-    top:90px;
-    left:20px;
+    top:95px;
+    left:25px;
 }
+
 
 .top-section{
     margin-top: 25px;
@@ -51,7 +55,10 @@ a.button:active{
     display: flex;
     justify-content: space-between;
     align-items: end;
-    color:rgb(194, 247, 141);
+    color:#90c226;
+}
+.top-section *{
+    font-family: 'Playfair Display',serif;
 }
 .top-section img{
     width: 600px;
@@ -60,15 +67,16 @@ a.button:active{
     box-shadow: 1px 1px 1px black;
 }
 .top-section h1{
-    font-size: 50px;
+    font-size: 75px;
     font-weight: bold;
     text-transform: uppercase;
-
 }
 .top-section h4{
     font-size: 30px;
     text-align: end;
 }
+
+
 .about-section{
     margin: 30px auto;
 }
@@ -76,13 +84,16 @@ a.button:active{
     font-size: 70px;
     font-weight: bold;
     margin-bottom: 25px;
-    color: rgb(194, 247, 141);
+    color: #90c226;
+    font-family: "Playfair Display",serif;
 }
 .about-section p{
     line-height: 30px;
     letter-spacing: 1.5px;
     text-align: justify;
 }
+
+
 .bio-section{
     margin:30px auto;
 }
@@ -95,6 +106,8 @@ a.button:active{
 .bio-section li{
     margin-bottom:15px;
 }
+
+
 footer{
     margin: 50px;
     text-align: end;
