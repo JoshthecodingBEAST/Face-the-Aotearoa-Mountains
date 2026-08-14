@@ -60,10 +60,16 @@ body{
     padding: 14px 22px;
     font-size: 18px;
     border: none;
-    background-color: #1f4d3a;
+    background-color: #90c226;
     color: white;
     cursor: pointer;
     border-radius: 10px;
+}
+.searchbar button:hover{
+    transform:scale(1.05);
+}
+.search-bar button:active{
+    transform:scale(0.95);
 }
 
 .search-bar select{

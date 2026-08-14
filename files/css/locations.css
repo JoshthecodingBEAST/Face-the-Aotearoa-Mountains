@@ -127,7 +127,8 @@ a.button:active{
 }
 
 .bio-section *{
-    font-size: clamp(9px, 1.5vw,16px);
+    font-size: clamp(9px, 1.5vw,20px);
+    font-family: 'poppins',serif;
 }
 .bio-section{
     margin:30px auto;

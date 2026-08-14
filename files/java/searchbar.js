@@ -3,9 +3,9 @@ const placeholderImage = "../images/logo.jpg";
         // JavaScript city dictionary.
         const cityVacationSpots = {
             auckland: [
-                { name: "Auckland Placeholder Spot 1", link: "locations/auckland_sky_tower.html", image: "../images/auckland_sky_tower.jpg" },
-                { name: "Auckland Placeholder Spot 2", link: "", image: "../images/logo.jpg" },
-                { name: "Auckland Placeholder Spot 3", link: "", image: "../images/logo.jpg" }
+                { name: "The Sky Tower", link: "locations/auckland_sky_tower.html", image: "../images/auckland_sky_tower.jpg" },
+                { name: "Auckland's Lion Rock", link: "locations/auckland_lion_rock.html", image: "../images/auckland_lion_rock.jpg" },
+                { name: "Auckland's Palm Beach", link: "locations/auckland_palmbeach.html", image: "../images/auckland_palmbeach.jpg" }
             ],
             wellington: [
                 { name: "Wellington Placeholder Spot 1", link: "", image: "../images/logo.jpg" },
@@ -23,9 +23,9 @@ const placeholderImage = "../images/logo.jpg";
                 { name: "Centennial Park", link: "locations/rotorua_centennial_park.html", image: "../images/rotorua_centennial_park.jpg" }
             ],
             hamilton: [
-                { name: "Hamilton Placeholder Spot 1", link: "", image: "../images/logo.jpg" },
-                { name: "Hamilton Placeholder Spot 2", link: "", image: "../images/logo.jpg" },
-                { name: "Hamilton Placeholder Spot 3", link: "", image: "../images/logo.jpg" }
+                { name: "Hamilton Gardens", link: "locations/hamilton_gardens.html", image: "../images/hamilton_gardens.jpg" },
+                { name: "Waikato's Hobbit Hole!", link: "locations/hamilton_hobbit.html", image: "../images/hamilton_hobbit.jpg" },
+                { name: "Marokopa Falls", link: "locations/hamilton_marokopa_falls.html", image: "../images/hamilton_marokopa_falls.jpg" }
             ],
             tauranga: [
                 { name: "Tauranga Placeholder Spot 1", link: "", image: "../images/logo.jpg" },
