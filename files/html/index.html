@@ -15,12 +15,36 @@
     <!-- HTML search bar. The city is sent to the results page through the URL. -->
     <form class="search-bar" action="searchbar.html" method="get">
         <input type="text" id="city-input" name="city" placeholder="Enter a Major NZ City!" required>
+
+        <select  id="city-dropdown">
+            <option value="">Or select a city</option>
+            <option value="Auckland">Auckland</option>
+            <option value="Wellington">Wellington</option>
+            <option value="Christchurch">Christchurch</option>
+            <option value="Rotorua">Rotorua</option>
+            <option value="Hamilton">Hamilton</option>
+            <option value="Tauranga">Tauranga</option>
+            <option value="Dunedin">Dunedin</option>
+            <option value="Queenstown">Queenstown</option>
+        </select>
+
         <button type="submit">Search</button>
     </form>
 
     <div class="instructions">
         <h3>Enter a Major City Around New Zealand and get shown 3! Tourist! Locations!</h3>
-        <h4>If you</h4>
+        <h4>If you want to get ready to be a tourist, start searching!</h4>
     </div>
+
+    <script>
+        const cityDropdown = document.getElementById("city-dropdown");
+        const cityInput = document.getElementById("city-input")
+
+        if (cityDropdown && cityInput) {
+            cityDropdown.addEventListener("change", function(){
+                cityInput.value = this.value;
+                });
+        }
+    </script>
 </body>
 </html>
