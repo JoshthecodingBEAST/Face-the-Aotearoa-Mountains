@@ -8,14 +8,14 @@ const placeholderImage = "../images/logo.jpg";
                 { name: "Auckland's Palm Beach", link: "locations/auckland_palmbeach.html", image: "../images/auckland_palmbeach.jpg" }
             ],
             wellington: [
-                { name: "Wellington Placeholder Spot 1", link: "", image: "../images/logo.jpg" },
-                { name: "Wellington Placeholder Spot 2", link: "", image: "../images/logo.jpg" },
-                { name: "Wellington Placeholder Spot 3", link: "", image: "../images/logo.jpg" }
+                { name: "Wellington's Cable Car!", link: "locations/wellington_cable_car.html", image: "../images/wellington_cable_car.jpg" },
+                { name: "Wellington Cape Palliser", link: "locations/wellington_cape_palliser.html", image: "../images/wellington_cape_palliser.jpg" },
+                { name: "Wellington Oriental Bay", link: "locations/wellington_oriental_bay.html", image: "../images/wellington_oriental_bay.jpg" }
             ],
             christchurch: [
-                { name: "Christchurch Placeholder Spot 1", link: "", image: "../images/logo.jpg" },
-                { name: "Christchurch Placeholder Spot 2", link: "", image: "../images/logo.jpg" },
-                { name: "Christchurch Placeholder Spot 3", link: "", image: "../images/logo.jpg" }
+                { name: "Banks Peninsula", link: "locations/christchurch_banks_peninsula.html", image: "../images/christchurch_banks_peninsula.jpg" },
+                { name: "Cave Rock", link: "locations/christchurch_cave_rock.html", image: "../images/christchurch_cave_rock.jpg" },
+                { name: "Port Hills", link: "locations/christchurch_port_hills.html", image: "../images/christchurch_port_hills.jpg" }
             ],
             rotorua: [
                 { name: "Tarawera", link: "locations/rotorua_tarawera.html", image: "../images/rotorua_tarawera.jpg" },
@@ -28,9 +28,8 @@ const placeholderImage = "../images/logo.jpg";
                 { name: "Marokopa Falls", link: "locations/hamilton_marokopa_falls.html", image: "../images/hamilton_marokopa_falls.jpg" }
             ],
             tauranga: [
-                { name: "Tauranga Placeholder Spot 1", link: "", image: "../images/logo.jpg" },
-                { name: "Tauranga Placeholder Spot 2", link: "", image: "../images/logo.jpg" },
-                { name: "Tauranga Placeholder Spot 3", link: "", image: "../images/logo.jpg" }
+                { name: "Tauranga Harbour Bridge", link: "locations/tauranga_bridge.html", image: "../images/tauranga_bridge.jpg" },
+                { name: "Mount Maunganui", link: "locations/tauranga_mount_maunganui.html", image: "../images/tauranga_mount_maunganui.jpg" },
             ],
             dunedin: [
                 { name: "Dunedin Placeholder Spot 1", link: "", image: "../images/logo.jpg" },
