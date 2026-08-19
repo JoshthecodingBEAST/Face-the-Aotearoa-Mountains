@@ -32,14 +32,14 @@ const placeholderImage = "../images/logo.jpg";
                 { name: "Mount Maunganui", link: "locations/tauranga_mount_maunganui.html", image: "../images/tauranga_mount_maunganui.jpg" },
             ],
             dunedin: [
-                { name: "Dunedin Placeholder Spot 1", link: "", image: "../images/logo.jpg" },
-                { name: "Dunedin Placeholder Spot 2", link: "", image: "../images/logo.jpg" },
-                { name: "Dunedin Placeholder Spot 3", link: "", image: "../images/logo.jpg" }
+                { name: "Dunedin Harrington Point", link: "locations/dunedin_harrington_point.html", image: "../images/dunedin_harrington_point.jpg" },
+                { name: "Dunedin's Sheep Mountain!", link: "locations/dunedin_sheep_mountain.html", image: "../images/dunedin_harrington_bay.jpg" },
+                { name: "Dunedin's St Clair Bay", link: "locations/dunedin_st_clair.html", image: "../images/dunedin_st_clair.jpg" }
             ],
             queenstown: [
-                { name: "Queenstown Placeholder Spot 1", link: "", image: "../images/logo.jpg" },
-                { name: "Queenstown Placeholder Spot 2", link: "", image: "../images/logo.jpg" },
-                { name: "Queenstown Placeholder Spot 3", link: "", image: "../images/logo.jpg" }
+                { name: "Queenstown Beach!", link: "locations/queenstown_beach.html", image: "../images/queenstown_beach.jpg" },
+                { name: "Queenstown Lake Wakatipu!", link: "locations/queenstown_lake_wakatipu.html", image: "../images/title_bg.jpg" },
+                { name: "Queenstown's Skippers Canyon", link: "locations/queenstown_skippers_canyon.html", image: "../images/queenstown_skippers_canyon.jpg" }
             ]
         };
 
