@@ -41,10 +41,22 @@
         const cityInput = document.getElementById("city-input")
 
         if (cityDropdown && cityInput) {
-            cityDropdown.addEventListener("change", function(){
-                cityInput.value = this.value;
+            cityDropdown.addEventListener("input", function(){
+                cityInput.value = cityDropdown.value;
                 });
         }
+        cityInput.addEventListener("input", function() {
+        const typedCity = cityInput.value.trim().toLowerCase();
+
+        cityDropdown.value = "";
+
+        for (const option of cityDropdown.options) {
+            if (option.value.toLowerCase() === typedCity) {
+                cityDropdown.value = option.value;
+                break;
+            }
+        }
+    });
     </script>
 </body>
 </html>
