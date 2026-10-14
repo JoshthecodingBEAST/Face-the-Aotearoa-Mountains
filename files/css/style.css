@@ -15,6 +15,7 @@
     min-height: 100px;
     padding: 45px,20px,0;
     color: rgb(255, 249, 165);
+    text-shadow: 10px;
 }
 
 .instructions{
@@ -61,7 +62,7 @@ body{
     font-size: 18px;
     border: none;
     background-color: rgb(129, 235, 134);
-    color: white;
+    color: rgb(0, 0, 0);
     cursor: pointer;
     border-radius: 10px;
 }
@@ -113,7 +114,7 @@ a.back-link{
     font-weight: bold;
     text-align: center;
     text-decoration: none;
-    color: white;
+    color: rgb(0, 0, 0);
     background-color: rgb(129, 235, 134);
     border-radius: 8px;
     box-shadow: 0 4px 6px rgb(82, 82, 82);
